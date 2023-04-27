@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Logo from '../imge/logo.png';
 
 const Navbar = () => {
   return (
     <div className='navbar'>
       <div className="container">
-        <div className="logo">logo</div>
+        <div className="logo">
+          <img src={Logo} alt="logo" className='logo'/>
+        </div>
         <div className="links">
           <Link className='link' to="/?cart=art">
             <h6>ART</h6>
@@ -28,7 +31,7 @@ const Navbar = () => {
           <span>Jakub</span>
           <span>Logout</span>
           <span className='write'>
-            <Link to='/write'>Write</Link>
+            <Link className="link" to='/write'>Write</Link>
           </span>
         </div>
       </div>
