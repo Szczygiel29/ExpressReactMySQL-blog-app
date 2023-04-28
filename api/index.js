@@ -11,4 +11,5 @@ app.use("/api/posts", postRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 
+
 app.listen(8080, () => {console.log(`http://localhost:8080`)})
