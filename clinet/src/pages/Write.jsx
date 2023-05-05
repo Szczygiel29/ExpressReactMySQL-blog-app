@@ -56,6 +56,7 @@ const Write = () => {
         <input
           type="text"
           placeholder="Title"
+          value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <div className="editorContainer">
@@ -96,17 +97,6 @@ const Write = () => {
           <div className="cat">
             <input
               type="radio"
-              checked={cat === "art"}
-              name="cat"
-              value="art"
-              id="art"
-              onChange={(e) => setCat(e.target.value)}
-            />
-            <label htmlFor="art">Art</label>
-          </div>
-          <div className="cat">
-            <input
-              type="radio"
               checked={cat === "science"}
               name="cat"
               value="science"
@@ -136,6 +126,17 @@ const Write = () => {
               onChange={(e) => setCat(e.target.value)}
             />
             <label htmlFor="cinema">Cinema</label>
+          </div>
+          <div className="cat">
+            <input
+              type="radio"
+              checked={cat === "sport"}
+              name="cat"
+              value="sport"
+              id="sport"
+              onChange={(e) => setCat(e.target.value)}
+            />
+            <label htmlFor="sport">Sport</label>
           </div>
           <div className="cat">
             <input

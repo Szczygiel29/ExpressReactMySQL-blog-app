@@ -11,12 +11,9 @@ import DOMPurify from "dompurify";
 
 const Single = () => {
   const [post, setPost] = useState({});
-
   const location = useLocation();
   const navigate = useNavigate();
-
   const postId = location.pathname.split("/")[2];
-
   const { currentUser } = useContext(AuthContext);
 
   useEffect(() => {
