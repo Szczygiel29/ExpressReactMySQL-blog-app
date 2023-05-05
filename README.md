@@ -28,6 +28,6 @@ The following are the main dependencies for the project:
 * sass for styling the UI
 * web-vitals for measuring web performance metrics.
 
-##Demo
+## Demo
 
 ![React App - Google Chrome 05 05 2023 20_02_06](https://user-images.githubusercontent.com/116550165/236533910-151f6875-a0ac-4eb5-88a9-7f326770c151.png)
