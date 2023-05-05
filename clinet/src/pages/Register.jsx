@@ -4,28 +4,26 @@ import axios from 'axios'
 
 const Register = () => {
   const [inputs, setInputs] = useState({
-    username:"",
-    email:"",
-    password:"",
-  })
-
-  const [err, setErr] = useState(null)
-
+    username: "",
+    email: "",
+    password: "",
+  });
+  const [err, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setInputs(prev => ({...prev, [e.target.name]: e.target.value}))
-  }
+    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
-      await axios.post("http://localhost:8080/api/auth/register", inputs);
-      navigate("/login")
-    }catch(err){
-      console.log(err)
+    try {
+      await axios.post("/auth/register", inputs);
+      navigate("/login");
+    } catch (err) {
+      setError(err.response.data);
     }
-  }
+  };
 
   return (
     <div className='auth'>
