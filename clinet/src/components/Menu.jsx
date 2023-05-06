@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom';
 
 export const Menu = ({ cat }) => {
     const [posts, setPosts] = useState([]);
@@ -23,7 +24,9 @@ export const Menu = ({ cat }) => {
                 <div className="post" key={post.id}>
                     <img src={`../upload/${post.img}`} alt="" />
                     <h2>{post.title}</h2>
-                    <button>Ream More</button>
+                    <Link className='link' to={`/post/${post.id}`}>
+                        <button>Ream More</button>
+                    </Link>
                 </div>
             ))}
         </div>
